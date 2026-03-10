@@ -1,3 +1,4 @@
 import { render } from "react-dom";
+import App from "./App";
 
-render(<div>LOXsssss</div>, document.querySelector("#root"));
+render(<App />, document.querySelector("#root"));
