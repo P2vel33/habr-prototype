@@ -4,6 +4,7 @@ export interface BuildPaths {
   build: string;
   html: string;
   tsconfig: string;
+  src: string;
 }
 
 export interface BuildEnv {
