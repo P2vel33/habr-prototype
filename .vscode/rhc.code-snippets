@@ -1,6 +1,6 @@
 {
-  "lox": {
-    "prefix": "LOX",
+  "rhc": {
+    "prefix": "rhc",
     "body": [
       "import cls from \"./${1:${TM_FILENAME_BASE}}.module.scss\";",
       "import { classNames } from \"@/shared/lib/classNames/classNames\";",
@@ -17,6 +17,6 @@
       "  );",
       "};",
     ],
-    "description": "lox component template with lowercase class name",
+    "description": "react habr component",
   },
 }

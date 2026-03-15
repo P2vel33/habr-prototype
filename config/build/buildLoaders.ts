@@ -1,10 +1,23 @@
-import path from "node:path";
 import webpack from "webpack";
 import { BuildOptions } from "./types/config";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   const { paths, isDev } = options;
+
+  const fileLoader = {
+    test: /\.(png|jpe?g|gif)$/i,
+    use: [
+      {
+        loader: "file-loader",
+      },
+    ],
+  };
+
+  const svgrLoader = {
+    test: /\.svg$/,
+    use: ["@svgr/webpack"],
+  };
 
   const typescriptLoader: webpack.RuleSetRule = {
     test: /\.tsx?$/,
@@ -36,5 +49,5 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
       "sass-loader",
     ],
   };
-  return [typescriptLoader, styleLoader];
+  return [typescriptLoader, styleLoader, svgrLoader, fileLoader];
 }
