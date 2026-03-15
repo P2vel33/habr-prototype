@@ -1,0 +1,9 @@
+{
+  "test": "Тестовый пример",
+  "translate": "Перевод",
+  "lang": "RU",
+  "navbar": {
+    "main-page": "Главная",
+    "about-page": "О сайте"
+  }
+}
