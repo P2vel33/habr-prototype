@@ -1,0 +1,9 @@
+{
+  "about-page": "about-page",
+  "lang": "lang",
+  "main-page": "main-page",
+  "navbar": {
+    "about-page": "about-page",
+    "main-page": "main-page"
+  }
+}
