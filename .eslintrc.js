@@ -8,6 +8,7 @@ module.exports = {
         "airbnb", // или другие основные конфиги
         // ... другие расширения ...
         "plugin:prettier/recommended", // <-- Добавить это В КОНЕЦ массива extends
+        "plugin:i18next/recommended",
     ],
 
     plugins: [
@@ -16,6 +17,7 @@ module.exports = {
         // "plugin:react/jsx-runtime",
         // ... ваши текущие плагины ...
         "prettier", // <-- Добавить этот плагин
+        "i18next",
     ],
     parser: "@typescript-eslint/parser",
     parserOptions: {
@@ -46,6 +48,7 @@ module.exports = {
         "react/jsx-props-no-spreading": "warn",
         "import/no-extraneous-dependencies": "off",
         "no-underscore-dangle": "warn",
+        "i18next/no-literal-string": ["error", { markupOnly: true }],
         // "no-undef": "warn",
         // ... ваши текущие переопределенные правила ...
         // Здесь можно добавить/переопределить правила при необходимости

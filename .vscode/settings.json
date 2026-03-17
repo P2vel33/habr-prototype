@@ -27,6 +27,7 @@
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "stylelint.validate": ["css", "postcss", "scss"],
     // Альтернатива: использовать ESLint как форматтер (он будет запускать Prettier через eslint-plugin-prettier)
     // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     // "[javascript]": {
