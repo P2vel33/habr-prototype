@@ -33,11 +33,25 @@ module.exports = {
             1,
             { extensions: [".js", ".jsx", ".tsx"] },
         ],
+        indent: [2, 4],
         "react/jsx-uses-react": "off",
         "react/react-in-jsx-scope": "off",
         "import/prefer-default-export": "off",
+        "no-unused-vars": "warn",
+        "react/require-default-props": "off",
+        "react/function-component-definition": [
+            2,
+            { namedComponents: "arrow-function" },
+        ],
+        "react/jsx-props-no-spreading": "warn",
+        "import/no-extraneous-dependencies": "off",
+        "no-underscore-dangle": "warn",
+        // "no-undef": "warn",
         // ... ваши текущие переопределенные правила ...
         // Здесь можно добавить/переопределить правила при необходимости
+    },
+    globals: {
+        __IS_DEV__: true,
     },
     // Возможно, у вас есть настройки parser и parserOptions для TypeScript
     // parser: '@typescript-eslint/parser',

@@ -8,7 +8,7 @@ import { AppRouter } from "@/app/providers/router";
 import { Navbar } from "@/widgets/Navbar";
 import { SideBar } from "@/widgets/SideBar";
 
-function App() {
+const App = () => {
     const { theme } = useTheme();
 
     return (
@@ -22,6 +22,6 @@ function App() {
             </Suspense>
         </div>
     );
-}
+};
 
 export default App;

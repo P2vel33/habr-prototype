@@ -5,29 +5,33 @@ import { ThemeSwitcher } from "@/widgets/ThemeSwither";
 import { LangSwitcher } from "@/widgets/LangSwitcher";
 
 interface SideBarProps {
-  className?: string;
+    className?: string;
 }
 
-export const SideBar = ({ className }: SideBarProps) => {
-  const [collapsed, setCollapsed] = useState(false);
-  const onToggle = () => {
-    setCollapsed((prev) => !prev);
-  };
-  return (
-    <div
-      className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
-        className,
-      ])}
-    >
-      <button onClick={onToggle}>toggle</button>
-      <div
-        className={classNames(cls.switchers, {
-          [cls["switchers-collapsed"]]: collapsed,
-        })}
-      >
-        <ThemeSwitcher />
-        <LangSwitcher className={classNames("", { [cls.lang]: !collapsed })} />
-      </div>
-    </div>
-  );
+export const SideBar = ({ className = "" }: SideBarProps) => {
+    const [collapsed, setCollapsed] = useState(false);
+    const onToggle = () => {
+        setCollapsed((prev) => !prev);
+    };
+    return (
+        <div
+            className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [
+                className,
+            ])}
+        >
+            <button type="button" onClick={onToggle}>
+                toggle
+            </button>
+            <div
+                className={classNames(cls.switchers, {
+                    [cls["switchers-collapsed"]]: collapsed,
+                })}
+            >
+                <ThemeSwitcher />
+                <LangSwitcher
+                    className={classNames("", { [cls.lang]: !collapsed })}
+                />
+            </div>
+        </div>
+    );
 };
