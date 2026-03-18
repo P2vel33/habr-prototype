@@ -4,15 +4,21 @@ import { classNames } from "@/shared/lib/classNames/classNames";
 
 export enum ThemeButton {
     CLEAR = "clear",
+    USUALLY = "usually",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
-    theme: ThemeButton;
+    theme?: ThemeButton;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
-    const { className = "", children, theme, ...otherProps } = props;
+    const {
+        className = "",
+        children,
+        theme = ThemeButton.USUALLY,
+        ...otherProps
+    } = props;
     return (
         <button
             type="button"

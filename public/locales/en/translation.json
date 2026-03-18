@@ -6,9 +6,28 @@
         "main-page": "Main",
         "about-page": "About"
     },
+    "app": {
+        "providers": {
+            "error-boundary": {
+                "bug-button": {
+                    "text-bug-button": "Create Error"
+                }
+            }
+        }
+    },
     "pages": {
         "not-found-page": {
             "title": "Page not found!"
+        }
+    },
+    "widgets": {
+        "side-bar": {
+            "text-button-toggle": "Expand",
+            "text-button-toggle-collapsed": "Collapse"
+        },
+        "page-error": {
+            "title": "Unexpected error!",
+            "text-button-reload": "Reload"
         }
     }
 }

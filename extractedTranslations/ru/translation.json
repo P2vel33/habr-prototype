@@ -1,5 +1,14 @@
 {
   "about-page": "about-page",
+  "app": {
+    "providers": {
+      "error-boundary": {
+        "bug-button": {
+          "text-bug-button": "text-bug-button"
+        }
+      }
+    }
+  },
   "lang": "lang",
   "main-page": "main-page",
   "navbar": {
@@ -9,6 +18,16 @@
   "pages": {
     "not-found-page": {
       "title": "title"
+    }
+  },
+  "widgets": {
+    "page-error": {
+      "text-button-reload": "text-button-reload",
+      "title": "title"
+    },
+    "side-bar": {
+      "text-button-toggle": "text-button-toggle",
+      "text-button-toggle-collapsed": "text-button-toggle-collapsed"
     }
   }
 }

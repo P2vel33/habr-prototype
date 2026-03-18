@@ -1,0 +1,25 @@
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { Button } from "@/shared/ui/Button";
+
+// Компонент для тестирования ошибок
+export const BugButton = () => {
+    const { t } = useTranslation();
+    const [error, setError] = useState(false);
+
+    const createError = () => {
+        setError((oldError) => !oldError);
+    };
+
+    useEffect(() => {
+        if (error) {
+            throw new Error();
+        }
+    }, [error]);
+
+    return (
+        <Button onClick={createError}>
+            {t("app.providers.error-boundary.bug-button.text-bug-button")}
+        </Button>
+    );
+};

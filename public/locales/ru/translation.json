@@ -6,9 +6,28 @@
         "main-page": "Главная",
         "about-page": "О сайте"
     },
+    "app": {
+        "providers": {
+            "error-boundary": {
+                "bug-button": {
+                    "text-bug-button": "Создать ошибку"
+                }
+            }
+        }
+    },
     "pages": {
         "not-found-page": {
             "title": "Страница не найдена!"
+        }
+    },
+    "widgets": {
+        "side-bar": {
+            "text-button-toggle": "Развернуть",
+            "text-button-toggle-collapsed": "Свернуть"
+        },
+        "page-error": {
+            "title": "Непридвиденная ошибка!",
+            "text-button-reload": "Перезагрузить"
         }
     }
 }
