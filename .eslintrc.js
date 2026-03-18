@@ -2,12 +2,11 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        jest: true,
     },
-    // ... ваши текущие настройки extends, plugins, rules ...
     extends: [
-        "airbnb", // или другие основные конфиги
-        // ... другие расширения ...
-        "plugin:prettier/recommended", // <-- Добавить это В КОНЕЦ массива extends
+        "airbnb",
+        "plugin:prettier/recommended",
         "plugin:i18next/recommended",
     ],
 
@@ -15,8 +14,7 @@ module.exports = {
         "react",
         "@typescript-eslint",
         // "plugin:react/jsx-runtime",
-        // ... ваши текущие плагины ...
-        "prettier", // <-- Добавить этот плагин
+        "prettier",
         "i18next",
     ],
     parser: "@typescript-eslint/parser",
@@ -48,7 +46,19 @@ module.exports = {
         "react/jsx-props-no-spreading": "warn",
         "import/no-extraneous-dependencies": "off",
         "no-underscore-dangle": "warn",
-        "i18next/no-literal-string": ["error", { markupOnly: true }],
+        "i18next/no-literal-string": [
+            "error",
+            { markupOnly: true, ignoreAttribute: ["to"] },
+        ],
+        "max-len": [
+            "error",
+            {
+                code: 100, // Увеличенный лимит
+                ignoreComments: true, // Игнорировать комментарии
+                ignorePattern:
+                    "^\\s*(?:var\\s.+\\s*=\\s*require\\s*\\(|import\\s+.*from\\s+.*)", // Игнорировать require/import
+            },
+        ],
         // "no-undef": "warn",
         // ... ваши текущие переопределенные правила ...
         // Здесь можно добавить/переопределить правила при необходимости
