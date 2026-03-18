@@ -1,9 +1,14 @@
 {
-  "test": "Тестовый пример",
-  "translate": "Перевод",
-  "lang": "RU",
-  "navbar": {
-    "main-page": "Главная",
-    "about-page": "О сайте"
-  }
+    "test": "Тестовый пример",
+    "translate": "Перевод",
+    "lang": "RU",
+    "navbar": {
+        "main-page": "Главная",
+        "about-page": "О сайте"
+    },
+    "pages": {
+        "not-found-page": {
+            "title": "Страница не найдена!"
+        }
+    }
 }

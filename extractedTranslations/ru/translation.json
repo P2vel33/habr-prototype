@@ -5,5 +5,10 @@
   "navbar": {
     "about-page": "about-page",
     "main-page": "main-page"
+  },
+  "pages": {
+    "not-found-page": {
+      "title": "title"
+    }
   }
 }

@@ -1,9 +1,14 @@
 {
-  "test": "Test example",
-  "translate": "Translate",
-  "lang": "EN",
-  "navbar": {
-    "main-page": "Main",
-    "about-page": "About"
-  }
+    "test": "Test example",
+    "translate": "Translate",
+    "lang": "EN",
+    "navbar": {
+        "main-page": "Main",
+        "about-page": "About"
+    },
+    "pages": {
+        "not-found-page": {
+            "title": "Page not found!"
+        }
+    }
 }

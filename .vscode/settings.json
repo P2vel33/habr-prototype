@@ -1,6 +1,7 @@
 {
     "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
     // ... другие настройки ...
+    "stylelint.validate": ["css", "postcss", "scss"],
     "editor.defaultFormatter": "esbenp.prettier-vscode", // Указывает Prettier как форматтер по умолчанию
     "editor.formatOnSave": true, // Форматировать при сохранении
     "[javascript]": {
@@ -27,7 +28,9 @@
     "[markdown]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "stylelint.validate": ["css", "postcss", "scss"],
+    "[scss]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint" // Убедитесь, что установлено расширение Stylelint
+    },
     // Альтернатива: использовать ESLint как форматтер (он будет запускать Prettier через eslint-plugin-prettier)
     // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     // "[javascript]": {
@@ -48,9 +51,11 @@
         "typescript",
         "typescriptreact",
         "html"
+        // "scss"
     ],
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit", // Автоматически исправлять ошибки ESLint (включая prettier через плагин) при сохранении
+        "source.fixAll.stylelint": "explicit",
         "source.organizeImports": "never" // Опционально: отключить автоимпорт, если он мешает
     }
 }
