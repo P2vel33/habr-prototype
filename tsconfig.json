@@ -12,8 +12,7 @@
         // Компилятор будет обрабатывать не только TS файлы, но и JS файлы
         "allowJs": true,
 
-        "types": ["jest"],
-
+        "types": ["jest", "node", "@testing-library/jest-dom"],
         "paths": {
             // "*": ["./src/*"],
             "@/*": ["./src/*"]
@@ -42,4 +41,5 @@
             "module": "CommonJS"
         }
     }
+    // "include": ["./config/jest/setupTests.ts"]
 }

@@ -48,7 +48,7 @@ module.exports = {
         "no-underscore-dangle": "warn",
         "i18next/no-literal-string": [
             "error",
-            { markupOnly: true, ignoreAttribute: ["to"] },
+            { markupOnly: true, ignoreAttribute: ["to", "data-testid"] },
         ],
         "max-len": [
             "error",
@@ -69,4 +69,12 @@ module.exports = {
     // Возможно, у вас есть настройки parser и parserOptions для TypeScript
     // parser: '@typescript-eslint/parser',
     // parserOptions: { ... },
+    overrides: [
+        {
+            files: ["**/src/**/*.test.{ts,tsx}"],
+            rules: {
+                "i18next/no-literal-string": "off",
+            },
+        },
+    ],
 };
