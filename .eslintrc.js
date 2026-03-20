@@ -59,6 +59,7 @@ module.exports = {
                     "^\\s*(?:var\\s.+\\s*=\\s*require\\s*\\(|import\\s+.*from\\s+.*)", // Игнорировать require/import
             },
         ],
+        "no-param-reassign": ["error", { props: false }],
         // "no-undef": "warn",
         // ... ваши текущие переопределенные правила ...
         // Здесь можно добавить/переопределить правила при необходимости
