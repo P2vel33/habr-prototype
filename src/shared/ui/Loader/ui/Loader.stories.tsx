@@ -1,26 +1,26 @@
-import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import "@/app/styles/index.scss";
 
-import { SideBar } from "./SideBar";
+import { Loader } from "./Loader";
 import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "@/app/providers/ThemeProvider";
 
 export default {
-    title: "widgets   /SideBar",
-    component: SideBar,
+    title: "shared   /Loader",
+    component: Loader,
     argTypes: {
         backgroundColor: { control: "color" },
     },
-} as ComponentMeta<typeof SideBar>;
+    args: {
+        to: "/",
+    },
+    decorators: [ThemeDecorator(Theme.LIGHT)],
+} as ComponentMeta<typeof Loader>;
 
-const Template: ComponentStory<typeof SideBar> = (args) => (
-    <SideBar {...args} />
-);
+const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};
-Light.decorators = [ThemeDecorator(Theme.LIGHT)];
 
 export const Dark = Template.bind({});
 Dark.args = {};

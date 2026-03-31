@@ -1,21 +1,21 @@
-import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import "@/app/styles/index.scss";
 
-import { SideBar } from "./SideBar";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "@/app/providers/ThemeProvider";
 
 export default {
-    title: "widgets   /SideBar",
-    component: SideBar,
+    title: "widgets   /ThemeSwitcher",
+    component: ThemeSwitcher,
     argTypes: {
         backgroundColor: { control: "color" },
     },
-} as ComponentMeta<typeof SideBar>;
+    decorators: [ThemeDecorator(Theme.DARK)],
+} as ComponentMeta<typeof ThemeSwitcher>;
 
-const Template: ComponentStory<typeof SideBar> = (args) => (
-    <SideBar {...args} />
+const Template: ComponentStory<typeof ThemeSwitcher> = (args) => (
+    <ThemeSwitcher {...args} />
 );
 
 export const Light = Template.bind({});
@@ -24,4 +24,3 @@ Light.decorators = [ThemeDecorator(Theme.LIGHT)];
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK)];

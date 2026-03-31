@@ -1,5 +1,5 @@
 import path from "node:path";
-import webpack from "webpack";
+import webpack, { RuleSetRule } from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { buildCssLoader } from "../build/loaders/buildCssLoader";
 import { BuildPaths } from "../build/types/config";
@@ -34,6 +34,30 @@ export default ({
     );
     config.resolve?.modules?.push(paths.src);
     config.resolve?.extensions?.push(".ts", ".tsx");
-    config.module?.rules?.push(buildCssLoader(true));
+    if (config.module?.rules) {
+        config.module.rules = config.module.rules
+            .filter(
+                (rule): rule is RuleSetRule =>
+                    Boolean(rule) && typeof rule === "object"
+            )
+            .map((rule: RuleSetRule) => {
+                if (rule.test && /svg/.test(String(rule.test))) {
+                    return { ...rule, exclude: /\.svg$/i };
+                }
+                return rule;
+            });
+    }
+
+    if (config.module) {
+        if (!config.module.rules) {
+            config.module.rules = [];
+        }
+        config.module.rules.push({
+            test: /\.svg$/,
+            use: ["@svgr/webpack"],
+        });
+        config.module.rules.push(buildCssLoader(true));
+    }
+
     return config;
 };
