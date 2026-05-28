@@ -3,9 +3,12 @@ import { SideBar } from "./SideBar";
 import { renderWithTranslation } from "@/shared/lib/tests/renderWithTranslation/renderWithTranslation";
 
 describe("Sidebar", () => {
+    test("one", () => {
+        renderWithTranslation(<SideBar />);
+        screen.debug();
+    });
     test("have", () => {
         renderWithTranslation(<SideBar />);
-
         expect(screen.getByTestId("sidebar")).toBeInTheDocument();
     });
     test("test toggle", () => {
