@@ -1,7 +1,8 @@
 {
     "test": "Test example",
     "translate": "Translate",
-    "lang": "EN",
+    "lang": "English",
+    "short-lang": "EN",
     "navbar": {
         "main-page": "Main",
         "about-page": "About"

@@ -1,7 +1,8 @@
 {
     "test": "Тестовый пример",
     "translate": "Перевод",
-    "lang": "RU",
+    "lang": "Русский",
+    "short-lang": "RU",
     "navbar": {
         "main-page": "Главная",
         "about-page": "О сайте"
