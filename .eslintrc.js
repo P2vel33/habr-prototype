@@ -8,6 +8,7 @@ module.exports = {
         "airbnb",
         "plugin:prettier/recommended",
         "plugin:i18next/recommended",
+        "plugin:react-hooks/recommended",
     ],
 
     plugins: [
@@ -60,6 +61,10 @@ module.exports = {
             },
         ],
         "no-param-reassign": ["error", { props: false }],
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error",
         // "no-undef": "warn",
         // ... ваши текущие переопределенные правила ...
         // Здесь можно добавить/переопределить правила при необходимости

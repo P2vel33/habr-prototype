@@ -4,6 +4,7 @@ import { classNames } from "@/shared/lib/classNames/classNames";
 
 export enum ThemeButton {
     CLEAR = "clear",
+    CLEAR_INVERTED = "clearInverted",
     USUALLY = "usually",
     OUTLINE = "outline",
     BACKGROUND = "background",
@@ -28,7 +29,7 @@ export const Button: FC<ButtonProps> = (props) => {
         children,
         theme = ThemeButton.USUALLY,
         square,
-        size = ButtonSize.L,
+        size = ButtonSize.M,
         ...otherProps
     } = props;
 

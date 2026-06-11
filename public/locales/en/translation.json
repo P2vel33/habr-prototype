@@ -4,8 +4,7 @@
     "lang": "English",
     "short-lang": "EN",
     "navbar": {
-        "main-page": "Main",
-        "about-page": "About"
+        "auth": "Auth"
     },
     "app": {
         "providers": {

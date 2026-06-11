@@ -4,8 +4,7 @@
     "lang": "Русский",
     "short-lang": "RU",
     "navbar": {
-        "main-page": "Главная",
-        "about-page": "О сайте"
+        "auth": "Войти"
     },
     "app": {
         "providers": {
