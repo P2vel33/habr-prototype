@@ -1,0 +1,13 @@
+{
+    "tst": {
+        "prefix": "tst",
+        "body": [
+            "describe(\"${1:${TM_FILENAME_BASE}}\", () => {",
+            "    test(\"\", () => {",
+            "        expect().toEqual();",
+            "    });",
+            "});",
+        ],
+        "description": "test habr template",
+    },
+}

@@ -51,7 +51,7 @@ export const SideBar = ({ className = "" }: SideBarProps) => {
                     >
                         <MainIcon className={cls.icon} />
                         <span className={cls.link}>
-                            {t("navbar.main-page")}
+                            {t("widgets.side-bar.main-page")}
                         </span>
                     </AppLink>
                 </div>
@@ -61,7 +61,9 @@ export const SideBar = ({ className = "" }: SideBarProps) => {
                     theme={AppLinkTheme.SECONDARY}
                 >
                     <AboutIcon className={cls.icon} />
-                    <span className={cls.link}>{t("navbar.about-page")}</span>
+                    <span className={cls.link}>
+                        {t("widgets.side-bar.about-page")}
+                    </span>
                 </AppLink>
             </div>
             <div

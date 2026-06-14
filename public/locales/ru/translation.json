@@ -23,7 +23,9 @@
     "widgets": {
         "side-bar": {
             "text-button-toggle": "Развернуть",
-            "text-button-toggle-collapsed": "Свернуть"
+            "text-button-toggle-collapsed": "Свернуть",
+            "main-page": "Главная",
+            "about-page": "О нас"
         },
         "page-error": {
             "title": "Непридвиденная ошибка!",

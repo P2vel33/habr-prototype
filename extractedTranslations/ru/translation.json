@@ -21,12 +21,17 @@
       "title": "title"
     }
   },
+  "side-bar": {
+    "about-page": "about-page"
+  },
   "widgets": {
     "page-error": {
       "text-button-reload": "text-button-reload",
       "title": "title"
     },
     "side-bar": {
+      "about-page": "about-page",
+      "main-page": "main-page",
       "text-button-toggle": "text-button-toggle",
       "text-button-toggle-collapsed": "text-button-toggle-collapsed"
     }

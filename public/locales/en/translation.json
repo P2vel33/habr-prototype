@@ -23,7 +23,9 @@
     "widgets": {
         "side-bar": {
             "text-button-toggle": "Expand",
-            "text-button-toggle-collapsed": "Collapse"
+            "text-button-toggle-collapsed": "Collapse",
+            "main-page": "Main",
+            "about-page": "About us"
         },
         "page-error": {
             "title": "Unexpected error!",
