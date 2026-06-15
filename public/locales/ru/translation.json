@@ -3,9 +3,6 @@
     "translate": "Перевод",
     "lang": "Русский",
     "short-lang": "RU",
-    "navbar": {
-        "auth": "Войти"
-    },
     "app": {
         "providers": {
             "error-boundary": {
@@ -30,6 +27,10 @@
         "page-error": {
             "title": "Непридвиденная ошибка!",
             "text-button-reload": "Перезагрузить"
+        },
+        "widget-navbar": {
+            "auth": "Войти",
+            "description": "Че, ты, сутулый хуй хочешь?"
         }
     }
 }

@@ -3,9 +3,6 @@
     "translate": "Translate",
     "lang": "English",
     "short-lang": "EN",
-    "navbar": {
-        "auth": "Auth"
-    },
     "app": {
         "providers": {
             "error-boundary": {
@@ -30,6 +27,10 @@
         "page-error": {
             "title": "Unexpected error!",
             "text-button-reload": "Reload"
+        },
+        "widget-navbar": {
+            "auth": "Auth",
+            "description": "What do you want, you slouching dick?"
         }
     }
 }

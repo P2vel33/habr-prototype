@@ -25,6 +25,7 @@
     "about-page": "about-page"
   },
   "widgets": {
+    "navbar": "navbar",
     "page-error": {
       "text-button-reload": "text-button-reload",
       "title": "title"
@@ -34,6 +35,11 @@
       "main-page": "main-page",
       "text-button-toggle": "text-button-toggle",
       "text-button-toggle-collapsed": "text-button-toggle-collapsed"
+    },
+    "widget-navbar": {
+      "auth": "auth",
+      "description": "description",
+      "textt": "textt"
     }
   }
 }

@@ -9,5 +9,18 @@
             }
         ]
     ],
-    "plugins": ["i18next-extract"]
+    "plugins": [
+        [
+            "i18next-extract",
+            {
+                // Укажите путь к родительской папке языков (locale)
+                "localesPath": "./public/locale",
+                // Укажите шаблон для файлов переводов (по умолчанию часто "*.json")
+                // Но для структуры en/translation.json, ru/translation.json подходит "**/*.json"
+                "defaultNS": "translation", // Укажите, если namespace по умолчанию - "translation"
+                "outputPath": "extracted/{{locale}}/{{ns}}.json", // Опционально: путь для новых извлекаемых файлов
+                "functionNames": ["t"]
+            }
+        ]
+    ]
 }
