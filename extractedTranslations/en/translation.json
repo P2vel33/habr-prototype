@@ -1,4 +1,5 @@
 {
+  "": "",
   "about-page": "about-page",
   "app": {
     "providers": {
@@ -39,7 +40,9 @@
     "widget-navbar": {
       "auth": "auth",
       "description": "description",
-      "textt": "textt"
+      "password-placeholder": "password-placeholder",
+      "textt": "textt",
+      "username-placeholder": "username-placeholder"
     }
   }
 }

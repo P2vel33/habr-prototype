@@ -30,6 +30,8 @@
         },
         "widget-navbar": {
             "auth": "Войти",
+            "username-placeholder": "Введите никнейм",
+            "password-placeholder": "Введите пароль",
             "description": "Че, ты, сутулый хуй хочешь?"
         }
     }

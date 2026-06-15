@@ -30,6 +30,8 @@
         },
         "widget-navbar": {
             "auth": "Auth",
+            "username-placeholder": "Enter your nickname",
+            "password-placeholder": "Enter your password",
             "description": "What do you want, you slouching dick?"
         }
     }
