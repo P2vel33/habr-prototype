@@ -3,7 +3,7 @@ import { useCallback, useState } from "react";
 import cls from "./Navbar.module.scss";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { Button, ThemeButton } from "@/shared/ui/Button";
-import { LoginModal } from "@/feature/AuthByUsername";
+import { LoginModal } from "@/features/AuthByUsername";
 
 interface NavbarProps {
     className?: string;

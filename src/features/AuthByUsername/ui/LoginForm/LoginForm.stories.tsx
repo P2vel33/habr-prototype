@@ -3,11 +3,11 @@ import "@/app/styles/index.scss";
 
 import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "@/app/providers/ThemeProvider";
-import { Input } from "./Input";
+import { LoginForm } from "./LoginForm";
 
 export default {
-    title: "shared   /Input",
-    component: Input,
+    title: "features   /LoginForm",
+    component: LoginForm,
     argTypes: {
         backgroundColor: { control: "color" },
     },
@@ -15,18 +15,13 @@ export default {
         to: "/",
     },
     decorators: [ThemeDecorator(Theme.LIGHT)],
-} as ComponentMeta<typeof Input>;
+} as ComponentMeta<typeof LoginForm>;
 
-const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;
+const Template: ComponentStory<typeof LoginForm> = (args) => (
+    <LoginForm {...args} />
+);
 
 export const Light = Template.bind({});
-Light.args = {
-    placeholder: "test",
-    value: "1",
-};
+
 export const Dark = Template.bind({});
-Dark.args = {
-    placeholder: "test",
-    value: "1",
-};
 Dark.decorators = [ThemeDecorator(Theme.DARK)];

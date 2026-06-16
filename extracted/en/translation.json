@@ -1,0 +1,31 @@
+{
+  "app": {
+    "providers": {
+      "error-boundary": {
+        "bug-button": {
+          "text-bug-button": ""
+        }
+      }
+    }
+  },
+  "pages": {
+    "not-found-page": {
+      "title": ""
+    }
+  },
+  "widgets": {
+    "page-error": {
+      "text-button-reload": "",
+      "title": ""
+    },
+    "side-bar": {
+      "about-page": "",
+      "main-page": ""
+    },
+    "widget-navbar": {
+      "auth": "",
+      "password-placeholder": "",
+      "username-placeholder": ""
+    }
+  }
+}
