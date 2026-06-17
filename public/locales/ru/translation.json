@@ -17,6 +17,16 @@
             "title": "Страница не найдена!"
         }
     },
+    "features": {
+        "auth-by-username": {
+            "login-form": {
+                "title": "Окно авторизации",
+                "button-auth": "Войти",
+                "username-placeholder": "Введите никнейм",
+                "password-placeholder": "Введите пароль"
+            }
+        }
+    },
     "widgets": {
         "side-bar": {
             "text-button-toggle": "Развернуть",
@@ -29,9 +39,8 @@
             "text-button-reload": "Перезагрузить"
         },
         "widget-navbar": {
-            "auth": "Войти",
-            "username-placeholder": "Введите никнейм",
-            "password-placeholder": "Введите пароль",
+            "button-auth": "Войти",
+            "button-logout": "Выйти",
             "description": "Че, ты, сутулый хуй хочешь?"
         }
     }

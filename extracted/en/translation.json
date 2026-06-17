@@ -8,6 +8,17 @@
       }
     }
   },
+  "features": {
+    "auth-by-username": {
+      "login-form": {
+        "": "",
+        "button-auth": "",
+        "password-placeholder": "",
+        "title": "",
+        "username-placeholder": ""
+      }
+    }
+  },
   "pages": {
     "not-found-page": {
       "title": ""
@@ -24,6 +35,8 @@
     },
     "widget-navbar": {
       "auth": "",
+      "button-auth": "",
+      "button-logout": "",
       "password-placeholder": "",
       "username-placeholder": ""
     }

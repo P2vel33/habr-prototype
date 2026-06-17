@@ -17,6 +17,16 @@
             "title": "Page not found!"
         }
     },
+    "features": {
+        "auth-by-username": {
+            "login-form": {
+                "title": "Login window",
+                "button-auth": "Auth",
+                "username-placeholder": "Enter your nickname",
+                "password-placeholder": "Enter your password"
+            }
+        }
+    },
     "widgets": {
         "side-bar": {
             "text-button-toggle": "Expand",
@@ -29,9 +39,8 @@
             "text-button-reload": "Reload"
         },
         "widget-navbar": {
-            "auth": "Auth",
-            "username-placeholder": "Enter your nickname",
-            "password-placeholder": "Enter your password",
+            "button-auth": "Auth",
+            "button-logout": "Exit",
             "description": "What do you want, you slouching dick?"
         }
     }

@@ -1,5 +1,5 @@
 import path from "node:path";
-import webpack, { RuleSetRule } from "webpack";
+import webpack, { DefinePlugin, RuleSetRule } from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { buildCssLoader } from "../build/loaders/buildCssLoader";
 import { BuildPaths } from "../build/types/config";
@@ -26,6 +26,11 @@ export default ({
         config.plugins = [];
     }
 
+    config.plugins.push(
+        new DefinePlugin({
+            __IS_DEV__: true,
+        })
+    );
     config.plugins.push(
         new MiniCssExtractPlugin({
             filename: "[name].[contenthash:8].css",

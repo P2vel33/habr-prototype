@@ -4,6 +4,7 @@ import "@/app/styles/index.scss";
 import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "@/app/providers/ThemeProvider";
 import { LoginForm } from "./LoginForm";
+import { StoreDecorator } from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
 
 export default {
     title: "features   /LoginForm",
@@ -14,7 +15,10 @@ export default {
     args: {
         to: "/",
     },
-    decorators: [ThemeDecorator(Theme.LIGHT)],
+    decorators: [
+        StoreDecorator({ login: { username: "PROVERKA", password: "1111" } }),
+        ThemeDecorator(Theme.LIGHT),
+    ],
 } as ComponentMeta<typeof LoginForm>;
 
 const Template: ComponentStory<typeof LoginForm> = (args) => (

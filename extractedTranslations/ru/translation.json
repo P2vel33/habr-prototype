@@ -10,6 +10,17 @@
       }
     }
   },
+  "features": {
+    "auth-by-username": {
+      "login-form": {
+        "": "",
+        "button-auth": "button-auth",
+        "password-placeholder": "password-placeholder",
+        "title": "title",
+        "username-placeholder": "username-placeholder"
+      }
+    }
+  },
   "lang": "lang",
   "main-page": "main-page",
   "navbar": {
@@ -39,6 +50,8 @@
     },
     "widget-navbar": {
       "auth": "auth",
+      "button-auth": "button-auth",
+      "button-logout": "button-logout",
       "description": "description",
       "password-placeholder": "password-placeholder",
       "textt": "textt",

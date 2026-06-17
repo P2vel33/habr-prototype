@@ -5,6 +5,7 @@
         { "id": "3", "title": "another title", "views": 300 },
         { "id": "4", "title": "another title", "views": 400 }
     ],
+    "users": [{ "id": 1, "username": "test", "password": "1234" }],
     "comments": [
         { "id": "1", "text": "a comment about post 1", "postId": "1" },
         { "id": "2", "text": "another comment about post 1", "postId": "1" }
