@@ -22,6 +22,11 @@ export function buildPlugins({
             __IS_DEV__: JSON.stringify(isDev),
         }),
     ];
+    plugins.push(
+        new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+        })
+    );
     if (isDev) {
         plugins.push(new webpack.HotModuleReplacementPlugin());
         plugins.push(
@@ -29,11 +34,11 @@ export function buildPlugins({
                 overlay: false,
             })
         );
-        plugins.push(
-            new BundleAnalyzerPlugin({
-                openAnalyzer: false,
-            })
-        );
+        // plugins.push(
+        //     new BundleAnalyzerPlugin({
+        //         openAnalyzer: false,
+        //     })
+        // );
     }
     return plugins;
 }
