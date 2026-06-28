@@ -28,7 +28,8 @@ export default ({
 
     config.plugins.push(
         new DefinePlugin({
-            __IS_DEV__: true,
+            __IS_DEV__: JSON.stringify(true),
+            __API__: JSON.stringify(""),
         })
     );
     config.plugins.push(

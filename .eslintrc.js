@@ -72,6 +72,7 @@ module.exports = {
     },
     globals: {
         __IS_DEV__: true,
+        __API__: true,
     },
     // Возможно, у вас есть настройки parser и parserOptions для TypeScript
     // parser: '@typescript-eslint/parser',

@@ -9,14 +9,14 @@ import App from "./app/App";
 import { StoreProvider } from "./app/providers/StoreProvider";
 
 render(
-    <StoreProvider>
-        <BrowserRouter>
+    <BrowserRouter>
+        <StoreProvider>
             <ErrorBoundary>
                 <ThemeProvider>
                     <App />
                 </ThemeProvider>
             </ErrorBoundary>
-        </BrowserRouter>
-    </StoreProvider>,
+        </StoreProvider>
+    </BrowserRouter>,
     document.querySelector("#root")
 );
