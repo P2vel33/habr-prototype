@@ -1,5 +1,4 @@
 import { memo, useState } from "react";
-import { useTranslation } from "react-i18next";
 import cls from "./SideBar.module.scss";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { ThemeSwitcher } from "@/widgets/ThemeSwither";
@@ -14,7 +13,6 @@ interface SideBarProps {
 }
 
 export const SideBar = memo(({ className = "" }: SideBarProps) => {
-    const { t } = useTranslation();
     const [collapsed, setCollapsed] = useState(true);
     const onToggle = () => {
         setCollapsed((prev) => !prev);
