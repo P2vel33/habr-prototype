@@ -15,6 +15,9 @@
     "pages": {
         "not-found-page": {
             "title": "Page not found!"
+        },
+        "profile-page": {
+            "title": "Page profile"
         }
     },
     "features": {
@@ -32,7 +35,8 @@
             "text-button-toggle": "Expand",
             "text-button-toggle-collapsed": "Collapse",
             "main-page": "Main",
-            "about-page": "About us"
+            "about-page": "About us",
+            "profile-page": "Profile"
         },
         "page-error": {
             "title": "Unexpected error!",

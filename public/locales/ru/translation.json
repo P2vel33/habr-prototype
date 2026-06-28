@@ -15,6 +15,9 @@
     "pages": {
         "not-found-page": {
             "title": "Страница не найдена!"
+        },
+        "profile-page": {
+            "title": "Страница профиля"
         }
     },
     "features": {
@@ -32,7 +35,8 @@
             "text-button-toggle": "Развернуть",
             "text-button-toggle-collapsed": "Свернуть",
             "main-page": "Главная",
-            "about-page": "О нас"
+            "about-page": "О нас",
+            "profile-page": "Профиль"
         },
         "page-error": {
             "title": "Непридвиденная ошибка!",

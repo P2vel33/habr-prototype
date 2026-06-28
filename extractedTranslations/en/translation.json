@@ -1,5 +1,6 @@
 {
   "": "",
+  "222": "222",
   "about-page": "about-page",
   "app": {
     "providers": {
@@ -30,6 +31,9 @@
   },
   "pages": {
     "not-found-page": {
+      "title": "title"
+    },
+    "profile-page": {
       "title": "title"
     }
   },
