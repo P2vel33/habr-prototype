@@ -7,6 +7,7 @@ import {
 } from "@/shared/lib/components/DynamicModalLoader/DynamicModalLoader";
 import { fetchProfileData, profileReducer } from "@/entities/Profile";
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { ProfileCard } from "@/entities/User/ui/ProfileCard/ProfileCard";
 
 export interface ProfilePageProps {
     className?: string;
@@ -26,7 +27,8 @@ const ProfilePage = ({ className = "" }: ProfilePageProps) => {
     return (
         <DynamicModalLoader reducers={redusers} removeAfterUnmount>
             <div className={classNames("", {}, [className])}>
-                {t("pages.profile-page.title")}
+                {/* {t("pages.profile-page.title")} */}
+                <ProfileCard />
             </div>
         </DynamicModalLoader>
     );

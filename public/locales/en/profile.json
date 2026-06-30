@@ -1,0 +1,8 @@
+{
+    "title": "Profile",
+    "button-edit": "Edit",
+    "data": {
+        "firstname": "Your firstname",
+        "lastname": "Your lastname"
+    }
+}

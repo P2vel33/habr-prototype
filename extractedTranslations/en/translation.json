@@ -11,6 +11,12 @@
       }
     }
   },
+  "button-edit": "button-edit",
+  "data": {
+    "firstname": "firstname",
+    "lastname": "lastname"
+  },
+  "edit": "edit",
   "features": {
     "auth-by-username": {
       "login-form": {
@@ -40,6 +46,7 @@
   "side-bar": {
     "about-page": "about-page"
   },
+  "title": "title",
   "widgets": {
     "navbar": "navbar",
     "page-error": {
