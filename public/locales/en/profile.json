@@ -1,8 +1,13 @@
 {
     "title": "Profile",
     "button-edit": "Edit",
+    "button-cancel": "Cancel",
     "data": {
         "firstname": "Your firstname",
         "lastname": "Your lastname"
+    },
+    "profile-card": {
+        "error-title": "Error",
+        "error-text": "Try refreshing the page"
     }
 }

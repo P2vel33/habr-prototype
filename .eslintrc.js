@@ -55,7 +55,7 @@ module.exports = {
         "max-len": [
             "error",
             {
-                code: 100, // Увеличенный лимит
+                code: 120, // Увеличенный лимит
                 ignoreComments: true, // Игнорировать комментарии
                 ignorePattern:
                     "^\\s*(?:var\\s.+\\s*=\\s*require\\s*\\(|import\\s+.*from\\s+.*)", // Игнорировать require/import

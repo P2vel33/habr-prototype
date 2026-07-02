@@ -1,13 +1,23 @@
-import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
+import { useSelector } from "react-redux";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import {
     DynamicModalLoader,
     ReducersList,
 } from "@/shared/lib/components/DynamicModalLoader/DynamicModalLoader";
-import { fetchProfileData, profileReducer } from "@/entities/Profile";
+import {
+    fetchProfileData,
+    profileActions,
+    profileReducer,
+    selectProfileData,
+    selectProfileError,
+    selectProfileForm,
+    selectProfileIsLoading,
+    selectProfileReadonly,
+} from "@/entities/Profile";
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { ProfileCard } from "@/entities/Profile/ui/ProfileCard/ProfileCard";
+import { ProfilePageHeader } from "./ProfilePageHeader/ProfilePageHeader";
 
 export interface ProfilePageProps {
     className?: string;
@@ -18,8 +28,24 @@ const redusers: ReducersList = {
 };
 
 const ProfilePage = ({ className = "" }: ProfilePageProps) => {
-    const { t } = useTranslation();
     const dispatch = useAppDispatch();
+    const formData = useSelector(selectProfileForm);
+    const isLoading = useSelector(selectProfileIsLoading);
+    const error = useSelector(selectProfileError);
+    const readonly = useSelector(selectProfileReadonly);
+
+    const onChangeFirstname = useCallback(
+        (value: string) => {
+            dispatch(profileActions.updateProfile({ firstname: value }));
+        },
+        [dispatch]
+    );
+    const onChangeLastname = useCallback(
+        (value: string) => {
+            dispatch(profileActions.updateProfile({ lastname: value }));
+        },
+        [dispatch]
+    );
 
     useEffect(() => {
         dispatch(fetchProfileData());
@@ -27,8 +53,15 @@ const ProfilePage = ({ className = "" }: ProfilePageProps) => {
     return (
         <DynamicModalLoader reducers={redusers} removeAfterUnmount>
             <div className={classNames("", {}, [className])}>
-                {/* {t("pages.profile-page.title")} */}
-                <ProfileCard />
+                <ProfilePageHeader />
+                <ProfileCard
+                    data={formData}
+                    isLoading={isLoading}
+                    error={error}
+                    onChangeFirstname={onChangeFirstname}
+                    onChangeLastname={onChangeLastname}
+                    readonly={readonly}
+                />
             </div>
         </DynamicModalLoader>
     );

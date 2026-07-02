@@ -1,8 +1,13 @@
 {
     "title": "Профиль",
     "button-edit": "Редактировать",
+    "button-cancel": "Отменить",
     "data": {
         "firstname": "Ваше имя",
         "lastname": "Ваше фамилия"
+    },
+    "profile-card": {
+        "error-title": "Ошибка",
+        "error-text": "Попробуйте перезагрузить страницу"
     }
 }

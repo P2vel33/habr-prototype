@@ -11,6 +11,7 @@
       }
     }
   },
+  "button-cancel": "button-cancel",
   "button-edit": "button-edit",
   "data": {
     "firstname": "firstname",
@@ -42,6 +43,10 @@
     "profile-page": {
       "title": "title"
     }
+  },
+  "profile-card": {
+    "error-text": "error-text",
+    "error-title": "error-title"
   },
   "side-bar": {
     "about-page": "about-page"

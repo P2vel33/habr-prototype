@@ -3,17 +3,20 @@
     border: 2px solid var(--inverted-bg-color);
 }
 
-.header {
-    display: flex;
-}
-
 .button-edit {
     margin-left: auto;
 }
 
 .data {
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+.loader,
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
 }
