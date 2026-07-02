@@ -6,7 +6,7 @@ import { SideItemType } from "../../model/items";
 import { classNames } from "@/shared/lib/classNames/classNames";
 
 interface SideBarItemProps {
-    item?: SideItemType;
+    item: SideItemType;
     collapsed: boolean;
 }
 

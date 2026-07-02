@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, FC, memo, ReactNode } from "react";
 import cls from "./Button.module.scss";
-import { classNames } from "@/shared/lib/classNames/classNames";
+import { classNames, Mods } from "@/shared/lib/classNames/classNames";
 
 export enum ThemeButton {
     CLEAR = "clear",
@@ -29,14 +29,14 @@ export const Button = memo((props: ButtonProps) => {
     const {
         className = "",
         children,
-        theme = ThemeButton.USUALLY,
+        theme = ThemeButton.OUTLINE,
         square,
         size = ButtonSize.M,
         disabled = false,
         ...otherProps
     } = props;
 
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [cls[theme]]: true,
         [cls.square]: square,
         [cls[size]]: true,

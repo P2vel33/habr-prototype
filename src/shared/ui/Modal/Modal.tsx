@@ -6,7 +6,7 @@ import React, {
     useState,
 } from "react";
 import cls from "./Modal.module.scss";
-import { classNames } from "@/shared/lib/classNames/classNames";
+import { classNames, Mods } from "@/shared/lib/classNames/classNames";
 import { Portal } from "../Portal/Portal";
 
 interface ModalProps {
@@ -24,7 +24,7 @@ export const Modal = (props: ModalProps) => {
 
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-    const timerRef = useRef<ReturnType<typeof setTimeout>>();
+    const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const closeHandler = useCallback(() => {
         if (onClose) {
             setIsClosing(true);
@@ -45,7 +45,7 @@ export const Modal = (props: ModalProps) => {
         },
         [closeHandler]
     );
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     };
@@ -61,7 +61,9 @@ export const Modal = (props: ModalProps) => {
         }
         return () => {
             window.removeEventListener("keydown", (event) => onKeyDown(event));
-            clearTimeout(timerRef.current);
+            if (timerRef.current) {
+                clearTimeout(timerRef.current);
+            }
         };
     }, [isOpen, onKeyDown]);
 

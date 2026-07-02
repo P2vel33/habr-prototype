@@ -39,6 +39,7 @@ module.exports = {
         "react/react-in-jsx-scope": "off",
         "import/prefer-default-export": "off",
         "no-unused-vars": "warn",
+        "no-undef": "off",
         "react/require-default-props": "off",
         "react/function-component-definition": [
             2,

@@ -7,7 +7,7 @@ import {
 } from "@/shared/lib/components/DynamicModalLoader/DynamicModalLoader";
 import { fetchProfileData, profileReducer } from "@/entities/Profile";
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { ProfileCard } from "@/entities/User/ui/ProfileCard/ProfileCard";
+import { ProfileCard } from "@/entities/Profile/ui/ProfileCard/ProfileCard";
 
 export interface ProfilePageProps {
     className?: string;
