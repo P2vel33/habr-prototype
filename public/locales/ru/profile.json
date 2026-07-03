@@ -2,9 +2,12 @@
     "title": "Профиль",
     "button-edit": "Редактировать",
     "button-cancel": "Отменить",
+    "button-save": "Сохранить",
     "data": {
         "firstname": "Ваше имя",
-        "lastname": "Ваше фамилия"
+        "lastname": "Вашa фамилия",
+        "age": "Ваш возвраст",
+        "sity": "Город проживания"
     },
     "profile-card": {
         "error-title": "Ошибка",

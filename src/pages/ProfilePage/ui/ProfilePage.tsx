@@ -9,7 +9,6 @@ import {
     fetchProfileData,
     profileActions,
     profileReducer,
-    selectProfileData,
     selectProfileError,
     selectProfileForm,
     selectProfileIsLoading,
@@ -18,6 +17,7 @@ import {
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { ProfileCard } from "@/entities/Profile/ui/ProfileCard/ProfileCard";
 import { ProfilePageHeader } from "./ProfilePageHeader/ProfilePageHeader";
+import { Country } from "@/shared/const/common";
 
 export interface ProfilePageProps {
     className?: string;
@@ -46,6 +46,18 @@ const ProfilePage = ({ className = "" }: ProfilePageProps) => {
         },
         [dispatch]
     );
+    const onChangeAge = useCallback(
+        (value: string) => {
+            dispatch(profileActions.updateProfile({ age: Number(value) || 0 }));
+        },
+        [dispatch]
+    );
+    const onChangeCity = useCallback(
+        (value: string) => {
+            dispatch(profileActions.updateProfile({ sity: value }));
+        },
+        [dispatch]
+    );
 
     useEffect(() => {
         dispatch(fetchProfileData());
@@ -60,6 +72,8 @@ const ProfilePage = ({ className = "" }: ProfilePageProps) => {
                     error={error}
                     onChangeFirstname={onChangeFirstname}
                     onChangeLastname={onChangeLastname}
+                    onChangeAge={onChangeAge}
+                    onChangeCity={onChangeCity}
                     readonly={readonly}
                 />
             </div>

@@ -6,6 +6,7 @@ import { Input } from "@/shared/ui/Input/ui/Input";
 import { Profile } from "../../model/types/profile";
 import { Loader } from "@/shared/ui/Loader/ui/Loader";
 import { TextAlign } from "@/shared/ui/Text/ui/Text";
+import { Country } from "@/shared/const/common";
 
 interface ProfileCardProps {
     className?: string;
@@ -14,6 +15,8 @@ interface ProfileCardProps {
     isLoading?: boolean;
     onChangeFirstname: (value: string) => void;
     onChangeLastname: (value: string) => void;
+    onChangeAge: (value: string) => void;
+    onChangeCity: (value: string) => void;
     readonly?: boolean;
 }
 
@@ -26,6 +29,8 @@ export const ProfileCard = (props: ProfileCardProps) => {
         className = "",
         onChangeFirstname,
         onChangeLastname,
+        onChangeAge,
+        onChangeCity,
         readonly,
     } = props;
 
@@ -71,6 +76,18 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     value={data?.lastname || ""}
                     placeholder={t("data.lastname")}
                     onChange={onChangeLastname}
+                    readonly={readonly}
+                />
+                <Input
+                    value={data?.age}
+                    placeholder={t("data.age")}
+                    onChange={onChangeAge}
+                    readonly={readonly}
+                />
+                <Input
+                    value={data?.sity || ""}
+                    placeholder={t("data.sity")}
+                    onChange={onChangeCity}
                     readonly={readonly}
                 />
             </div>

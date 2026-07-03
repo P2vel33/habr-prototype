@@ -2,9 +2,12 @@
     "title": "Profile",
     "button-edit": "Edit",
     "button-cancel": "Cancel",
+    "button-save": "Save",
     "data": {
         "firstname": "Your firstname",
-        "lastname": "Your lastname"
+        "lastname": "Your lastname",
+        "age": "Your age",
+        "sity": "Your sity"
     },
     "profile-card": {
         "error-title": "Error",

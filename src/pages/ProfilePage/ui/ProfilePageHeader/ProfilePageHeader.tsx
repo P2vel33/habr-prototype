@@ -5,7 +5,11 @@ import cls from "./ProfilePageHeader.module.scss";
 import { classNames } from "@/shared/lib/classNames/classNames";
 import { Button, ThemeButton } from "@/shared/ui/Button";
 import { Text } from "@/shared/ui/Text";
-import { profileActions, selectProfileReadonly } from "@/entities/Profile";
+import {
+    profileActions,
+    selectProfileReadonly,
+    updateProfileData,
+} from "@/entities/Profile";
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 
 interface ProfilePageHeaderProps {
@@ -25,6 +29,9 @@ export const ProfilePageHeader = ({
     const onCancel = useCallback(() => {
         dispatch(profileActions.returnProfile());
     }, [dispatch]);
+    const onSave = useCallback(() => {
+        dispatch(updateProfileData());
+    }, [dispatch]);
     return (
         <div className={classNames(cls.profilepageheader, {}, [className])}>
             <Text title={t("title")} />
@@ -33,9 +40,14 @@ export const ProfilePageHeader = ({
                     {t("button-edit")}
                 </Button>
             ) : (
-                <Button theme={ThemeButton.OUTLINE} onClick={onCancel}>
-                    {t("button-cancel")}
-                </Button>
+                <div className={cls["action-buttons"]}>
+                    <Button theme={ThemeButton.OUTLINE_RED} onClick={onCancel}>
+                        {t("button-cancel")}
+                    </Button>
+                    <Button theme={ThemeButton.OUTLINE} onClick={onSave}>
+                        {t("button-save")}
+                    </Button>
+                </div>
             )}
         </div>
     );

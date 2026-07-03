@@ -13,9 +13,12 @@
   },
   "button-cancel": "button-cancel",
   "button-edit": "button-edit",
+  "button-save": "button-save",
   "data": {
+    "age": "age",
     "firstname": "firstname",
-    "lastname": "lastname"
+    "lastname": "lastname",
+    "sity": "sity"
   },
   "edit": "edit",
   "features": {
