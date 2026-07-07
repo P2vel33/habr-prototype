@@ -16,9 +16,11 @@
   "button-save": "button-save",
   "data": {
     "age": "age",
+    "avatar": "avatar",
     "firstname": "firstname",
     "lastname": "lastname",
-    "sity": "sity"
+    "sity": "sity",
+    "username": "username"
   },
   "edit": "edit",
   "features": {

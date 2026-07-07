@@ -57,5 +57,6 @@
         "source.fixAll.eslint": "explicit", // Автоматически исправлять ошибки ESLint (включая prettier через плагин) при сохранении
         "source.fixAll.stylelint": "explicit",
         "source.organizeImports": "never" // Опционально: отключить автоимпорт, если он мешает
-    }
+    },
+    "accessibility.signalOptions.volume": 0
 }

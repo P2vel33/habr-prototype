@@ -7,6 +7,7 @@ import { Profile } from "../../model/types/profile";
 import { Loader } from "@/shared/ui/Loader/ui/Loader";
 import { TextAlign } from "@/shared/ui/Text/ui/Text";
 import { Country } from "@/shared/const/common";
+import { Avatar } from "~/src/shared/ui/Avatar/ui/Avatar";
 
 interface ProfileCardProps {
     className?: string;
@@ -17,6 +18,8 @@ interface ProfileCardProps {
     onChangeLastname: (value: string) => void;
     onChangeAge: (value: string) => void;
     onChangeCity: (value: string) => void;
+    onChangeUsername: (value: string) => void;
+    onChangeAvatar: (value: string) => void;
     readonly?: boolean;
 }
 
@@ -31,6 +34,8 @@ export const ProfileCard = (props: ProfileCardProps) => {
         onChangeLastname,
         onChangeAge,
         onChangeCity,
+        onChangeUsername,
+        onChangeAvatar,
         readonly,
     } = props;
 
@@ -66,6 +71,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
     return (
         <div className={classNames(cls.profilecard, {}, [className])}>
             <div className={cls.data}>
+                {data?.avatar && <Avatar src={data.avatar} alt={data.avatar} />}
                 <Input
                     value={data?.firstname || ""}
                     placeholder={t("data.firstname")}
@@ -79,6 +85,12 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     readonly={readonly}
                 />
                 <Input
+                    value={data?.username || ""}
+                    placeholder={t("data.username")}
+                    onChange={onChangeUsername}
+                    readonly={readonly}
+                />
+                <Input
                     value={data?.age}
                     placeholder={t("data.age")}
                     onChange={onChangeAge}
@@ -88,6 +100,12 @@ export const ProfileCard = (props: ProfileCardProps) => {
                     value={data?.sity || ""}
                     placeholder={t("data.sity")}
                     onChange={onChangeCity}
+                    readonly={readonly}
+                />
+                <Input
+                    value={data?.avatar || ""}
+                    placeholder={t("data.avatar")}
+                    onChange={onChangeAvatar}
                     readonly={readonly}
                 />
             </div>

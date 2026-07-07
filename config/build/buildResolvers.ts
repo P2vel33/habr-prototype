@@ -9,6 +9,7 @@ export function buildResolvers(options: BuildOptions): webpack.ResolveOptions {
         mainFiles: ["index"],
         alias: {
             "@": options.paths.src,
+            "~": options.paths.root,
         },
     };
 }

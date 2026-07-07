@@ -1,0 +1,18 @@
+{
+  "button-cancel": "",
+  "button-edit": "",
+  "button-save": "",
+  "data": {
+    "age": "",
+    "avatar": "",
+    "firstname": "",
+    "lastname": "",
+    "sity": "",
+    "username": ""
+  },
+  "profile-card": {
+    "error-text": "",
+    "error-title": ""
+  },
+  "title": ""
+}

@@ -5,6 +5,7 @@ export interface BuildPaths {
     html: string;
     tsconfig: string;
     src: string;
+    root: string;
 }
 
 export interface BuildEnv {

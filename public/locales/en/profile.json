@@ -6,8 +6,10 @@
     "data": {
         "firstname": "Your firstname",
         "lastname": "Your lastname",
+        "username": "Your username",
         "age": "Your age",
-        "sity": "Your sity"
+        "sity": "Your sity",
+        "avatar": "Your avatar`s link"
     },
     "profile-card": {
         "error-title": "Error",

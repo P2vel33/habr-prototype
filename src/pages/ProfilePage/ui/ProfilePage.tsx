@@ -58,6 +58,18 @@ const ProfilePage = ({ className = "" }: ProfilePageProps) => {
         },
         [dispatch]
     );
+    const onChangeUsername = useCallback(
+        (value: string) => {
+            dispatch(profileActions.updateProfile({ username: value }));
+        },
+        [dispatch]
+    );
+    const onChangeAvatar = useCallback(
+        (value: string) => {
+            dispatch(profileActions.updateProfile({ avatar: value }));
+        },
+        [dispatch]
+    );
 
     useEffect(() => {
         dispatch(fetchProfileData());
@@ -74,6 +86,8 @@ const ProfilePage = ({ className = "" }: ProfilePageProps) => {
                     onChangeLastname={onChangeLastname}
                     onChangeAge={onChangeAge}
                     onChangeCity={onChangeCity}
+                    onChangeUsername={onChangeUsername}
+                    onChangeAvatar={onChangeAvatar}
                     readonly={readonly}
                 />
             </div>

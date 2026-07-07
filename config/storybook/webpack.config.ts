@@ -15,11 +15,13 @@ export default ({
         entry: "",
         tsconfig: "",
         src: path.resolve(__dirname, "..", "..", "src"),
+        root: path.resolve(__dirname, "..", ".."),
     };
     if (config.resolve && !Array.isArray(config.resolve.alias)) {
         config.resolve.alias = {
             ...config.resolve.alias,
             "@": paths.src,
+            "~": paths.root,
         };
     }
     if (!config.plugins) {
