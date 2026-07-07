@@ -10,7 +10,7 @@
 .data {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .loader,
@@ -19,4 +19,14 @@
     align-items: center;
     justify-content: center;
     height: 300px;
+}
+
+.avatar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.editting {
+    border: 2px solid var(--inverted-primary-color);
 }

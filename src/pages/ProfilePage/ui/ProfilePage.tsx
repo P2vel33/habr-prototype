@@ -17,7 +17,8 @@ import {
 import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { ProfileCard } from "@/entities/Profile/ui/ProfileCard/ProfileCard";
 import { ProfilePageHeader } from "./ProfilePageHeader/ProfilePageHeader";
-import { Country } from "@/shared/const/common";
+import { Currency } from "~/src/entities/Currency";
+import { Country } from "~/src/entities/Country";
 
 export interface ProfilePageProps {
     className?: string;
@@ -70,6 +71,18 @@ const ProfilePage = ({ className = "" }: ProfilePageProps) => {
         },
         [dispatch]
     );
+    const onChangeCurrency = useCallback(
+        (value: Currency) => {
+            dispatch(profileActions.updateProfile({ currency: value }));
+        },
+        [dispatch]
+    );
+    const onChangeCountry = useCallback(
+        (value: Country) => {
+            dispatch(profileActions.updateProfile({ country: value }));
+        },
+        [dispatch]
+    );
 
     useEffect(() => {
         dispatch(fetchProfileData());
@@ -88,6 +101,8 @@ const ProfilePage = ({ className = "" }: ProfilePageProps) => {
                     onChangeCity={onChangeCity}
                     onChangeUsername={onChangeUsername}
                     onChangeAvatar={onChangeAvatar}
+                    onChangeCurrency={onChangeCurrency}
+                    onChangeCountry={onChangeCountry}
                     readonly={readonly}
                 />
             </div>

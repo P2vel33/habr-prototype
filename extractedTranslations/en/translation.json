@@ -1,6 +1,7 @@
 {
   "": "",
   "222": "222",
+  "Country": "Country",
   "about-page": "about-page",
   "app": {
     "providers": {
@@ -14,6 +15,8 @@
   "button-cancel": "button-cancel",
   "button-edit": "button-edit",
   "button-save": "button-save",
+  "country": "country",
+  "currency": "currency",
   "data": {
     "age": "age",
     "avatar": "avatar",
