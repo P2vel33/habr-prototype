@@ -5,7 +5,7 @@ import cls from "./SideBarItem.module.scss";
 import { AppLink, AppLinkTheme } from "@/shared/ui/AppLink/AppLink";
 import { SideItemType } from "../../model/items";
 import { classNames } from "@/shared/lib/classNames/classNames";
-import { selectUserAuthData } from "~/src/entities/User";
+import { selectUserAuthData } from "@/entities/User/model/selectors/selectUserAuthData/selectUserAuthData";
 
 interface SideBarItemProps {
     item: SideItemType;
